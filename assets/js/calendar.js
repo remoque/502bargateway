@@ -55,7 +55,7 @@ function getVacantInfo(month){
         };      
         // 改行ごとに配列化
         let lines = csv.responseText.split(/\r\n|\n/);
-        if(csv.responseText[0] == "<!DOCTYPE html>"){
+        if(lines[0] == "<!DOCTYPE html>"){
         }else{
             // 1行ごとに処理 ヘッダーの行を無視
             for (let i = 1; i < lines.length; ++i) {
