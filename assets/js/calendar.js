@@ -53,10 +53,10 @@ function getVacantInfo(month){
         } catch (err) {
             console.log(err);
         };      
-    }
-      console.log(csv.responseText);
+    };
         // 改行ごとに配列化
         let lines = csv.responseText.split(/\r\n|\n/);
+    console.log(lines);
         // 1行ごとに処理 ヘッダーの行を無視
         for (let i = 1; i < lines.length; ++i) {
             let cells = lines[i].split(",");
