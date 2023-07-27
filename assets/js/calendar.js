@@ -50,11 +50,10 @@ function getVacantInfo(month){
         // csvファイル読み込み失敗時のエラー対応
         try {
             csv.send(null);
-            console.log(null);
         } catch (err) {
             console.log(err);
     }
-            console.log(null);
+      console.log(csv.responseText);
         // 改行ごとに配列化
         let lines = csv.responseText.split(/\r\n|\n/);
         // 1行ごとに処理 ヘッダーの行を無視
