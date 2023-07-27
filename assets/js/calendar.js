@@ -53,7 +53,6 @@ function getVacantInfo(month){
         } catch (err) {
             console.log(err);
         };      
-    };
         // 改行ごとに配列化
         let lines = csv.responseText.split(/\r\n|\n/);
     console.log(lines);
@@ -64,6 +63,7 @@ function getVacantInfo(month){
                 csvArray.push(...cells);
             }
         }
+    }
     return csvArray;
 }
 
