@@ -52,14 +52,9 @@ function getVacantInfo(month){
             csv.send(null);
         } catch (err) {
             console.log(err);
-<<<<<<< HEAD
-        };
-      
-        console.log(csv.responseText);
-=======
+        };      
     }
       console.log(csv.responseText);
->>>>>>> 9c02617776017e3ef2ec49e727dd972bd0a7a77f
         // 改行ごとに配列化
         let lines = csv.responseText.split(/\r\n|\n/);
         // 1行ごとに処理 ヘッダーの行を無視
@@ -69,7 +64,6 @@ function getVacantInfo(month){
                 csvArray.push(...cells);
             }
         }
-    }
     return csvArray;
 }
 
