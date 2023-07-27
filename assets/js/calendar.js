@@ -55,12 +55,14 @@ function getVacantInfo(month){
         };      
         // 改行ごとに配列化
         let lines = csv.responseText.split(/\r\n|\n/);
-    console.log(lines);
-        // 1行ごとに処理 ヘッダーの行を無視
-        for (let i = 1; i < lines.length; ++i) {
-            let cells = lines[i].split(",");
-            if (cells.length != 1) {
-                csvArray.push(...cells);
+        if(csv.responseText[0] == "<!DOCTYPE html>"){
+        }else{
+            // 1行ごとに処理 ヘッダーの行を無視
+            for (let i = 1; i < lines.length; ++i) {
+                let cells = lines[i].split(",");
+                if (cells.length != 1) {
+                    csvArray.push(...cells);
+                }
             }
         }
     }
